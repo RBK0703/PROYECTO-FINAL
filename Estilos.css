@@ -19,7 +19,7 @@ body {
     color: var(--gris-oscuro);
 }
 
-.container {
+.container { /* Esta clase no se usa en el HTML, pero se mantiene si planeas usarla */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -42,7 +42,8 @@ header {
     align-items: center;
 }
 
-.wolf-logo {
+/* MODIFICACIÓN: Cambio de .wolf-logo a .bachiecocfrat-logo para consistencia */
+.bachiecocfrat-logo {
     height: 60px; /* Ajusta el tamaño del logo */
     margin-right: 10px;
 }
@@ -135,7 +136,36 @@ main {
     color: var(--rosa-claro);
 }
 
-/* Botones de Huella de Lobo */
+/* NUEVAS CLASES PARA CENTRAR IMÁGENES (reemplazo de <center> y <table>) */
+.image-gallery {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en pantallas pequeñas */
+    gap: 20px; /* Espacio entre las imágenes */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image-gallery img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+.image-center {
+    text-align: center; /* Centra las imágenes dentro de este contenedor */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image-center img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto; /* Mantiene la proporción */
+    display: inline-block; /* Permite centrar con text-align en el padre */
+}
+
+
+/* Botones de Huella de Lobo (estas clases no se usan en el HTML actual, pero se mantienen) */
 .paw-buttons-container {
     display: flex;
     justify-content: center;
@@ -176,7 +206,7 @@ main {
     transform: rotate(10deg) scale(1.1); /* Gira y agranda la imagen */
 }
 
-/* Información al hacer clic en los botones */
+/* Información al hacer clic en los botones (esta clase no se usa en el HTML actual, pero se mantiene) */
 .info-content {
     background-color: var(--blanco);
     padding: 30px;
@@ -253,7 +283,8 @@ footer {
     nav ul li {
         margin: 5px 0;
     }
-    .wolf-logo {
+    /* MODIFICACIÓN: Cambio de .wolf-logo a .bachiecocfrat-logo para consistencia */
+    .bachiecocfrat-logo {
         height: 50px;
     }
 
@@ -268,6 +299,12 @@ footer {
     .paw-button {
         width: 80px;
         height: 80px;
+    }
+
+    /* NUEVAS REGLAS RESPONSIVAS PARA IMÁGENES */
+    .image-gallery {
+        flex-direction: column; /* Apila las imágenes en pantallas pequeñas */
+        align-items: center; /* Centra las imágenes apiladas */
     }
 }
 
@@ -288,4 +325,3 @@ footer {
         height: 70px;
     }
 }
-
